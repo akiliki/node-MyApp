@@ -4,7 +4,8 @@
   "description": "Pruebas de Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "say": "cowsay Hola"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
     "node"
   ],
   "author": "Akiliki",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.4.0"
+  }
 }
