@@ -97,3 +97,26 @@ Ask(questions)
         console.log(`  Disfutatu`)
         console.log(`<<<<<< `)
     })
+
+
+
+const cp = require("child_process")
+function execCommand(command){
+    cp.exec(command,  (err, stdout, stderr) => {
+        const args = require("yargs").argv
+        if(err){
+            console.log(`Error: ${err}`)
+            return 
+        }
+        if(args){
+            console.log(`Argumentos son ` + args)
+        }
+        if(stdout)
+            console.log(`Standar out: \n ${stdout}`)
+            
+        if(stderr)
+            console.log(`Standar out: \n ${stderr}`)
+    })
+}
+
+execCommand("ls -la")
